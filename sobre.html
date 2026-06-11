@@ -1,14 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Sobre</h1>
     <p>informações importantes</p>
-    <a href="index.html">Voltar para a página inicial</a>
 
-</body>
+    <section>
+      <h2>Envie uma mensagem</h2>
+      <form action="#">
+        <label for="nome">Nome completo:</label><br />
+        <input type="text" id="nome" name="nome" /><br />
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" name="senha" id="senha">
+        
+        <br>
+
+        <br>
+
+        <label for="copa">Brasil vai ser campeão?</label>
+        
+        <br>
+        <input type="radio" id="sim" name="Brasil" value="Sim">
+        <label for="sim">Sim</label>
+         <input type="radio" id="nao" name="Brasil" value="Não">
+        <label for="nao">Não</label>
+        <br>
+
+<!-- Caixas de Seleção -->
+
+        <p>Selecione as suas favoritas ao título de 2026:</p>
+
+        <input type="checkbox" id="brasil" name="brasil" value="brasil"/>
+        <label for="brasil">Brasil</label>
+        <input type="checkbox" id="franca" name="França" value="França"/>
+        <label for="franca">França</label>
+
+        <br>
+
+        <label for="mensagem">Mensagem:</label><br />
+        <textarea name="mensagem" id="mensagem" rows="5"></textarea><br />
+
+        <label for="linguagens">Linguagem preferida web preferida:</label><br />
+        <select name="linguagens" id="linguagens">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">Javascript</option>
+          <option value="nenhuma">Nenhuma</option>
+        </select>
+      </form>
+    </section>
+    
+    <br>
+
+    <br>
+   
+
+    <a href="index.html">Voltar para a página inicial</a>
+  </body>
 </html>
