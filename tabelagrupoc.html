@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela de Classificação</title>
+
+<style>
+    body{
+        background:#111827;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#fff;
+        padding:20px;
+    }
+
+    .tabela-classificacao{
+        width:700px;
+        border-collapse:collapse;
+        background:#1f2937;
+    }
+
+    .tabela-classificacao th{
+        text-align:left;
+        padding:12px;
+        border-bottom:1px solid #374151;
+        color:#f9fafb;
+        font-weight:600;
+    }
+
+    .tabela-classificacao td{
+        padding:14px 12px;
+        border-bottom:1px solid #374151;
+        color:#e5e7eb;
+    }
+
+    .tabela-classificacao tr:last-child td{
+        border-bottom:none;
+    }
+
+    .posicao{
+        font-weight:bold;
+        color:#ffffff;
+        width:50px;
+    }
+
+    .selecao{
+        display:flex;
+        align-items:center;
+        gap:8px;
+    }
+
+    .bandeira{
+        font-size:12px;
+        font-weight:bold;
+        color:#d1d5db;
+        min-width:22px;
+    }
+
+    .centralizado{
+        text-align:center;
+        width:50px;
+    }
+</style>
+</head>
+<body>
+
+<table class="tabela-classificacao">
+    <thead>
+        <tr>
+            <th>Pos</th>
+            <th>Seleção</th>
+            <th>J</th>
+            <th>V</th>
+            <th>E</th>
+            <th>D</th>
+            <th>SG</th>
+            <th>Pts</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="posicao">1º</td>
+            <td>
+                <div class="selecao">
+                    <span>🏴</span>
+                    <span>Escócia</span>
+                </div>
+            </td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">+1</td>
+            <td class="centralizado">3</td>
+        </tr>
+
+        <tr>
+            <td class="posicao">2º</td>
+            <td>
+                <div class="selecao">
+                    <span class="bandeira">MA</span>
+                    <span>Marrocos</span>
+                </div>
+            </td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">1</td>
+        </tr>
+
+        <tr>
+            <td class="posicao">3º</td>
+            <td>
+                <div class="selecao">
+                    <span class="bandeira">BR</span>
+                    <span>Brasil</span>
+                </div>
+            </td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">1</td>
+        </tr>
+
+        <tr>
+            <td class="posicao">4º</td>
+            <td>
+                <div class="selecao">
+                    <span class="bandeira">HT</span>
+                    <span>Haiti</span>
+                </div>
+            </td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">0</td>
+            <td class="centralizado">1</td>
+            <td class="centralizado">-1</td>
+            <td class="centralizado">0</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

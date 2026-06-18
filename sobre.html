@@ -7,40 +7,144 @@
   </head>
   <body>
     <h1>Sobre</h1>
-    <p>informações importantes</p>
+
+    <br />
+
+    <section>
+      <h2>Classificação Atual (Grupo c)</h2>
+      <table>
+        <thead>
+          <th>Pos</th>
+          <th>Seleção</th>
+          <th>Jogos</th>
+          <th>Pontos</th>
+        </thead>
+
+        <tr>
+          <td>1°</td>
+          <td>Escócia</td>
+          <td>1</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>2°</td>
+          <td>Marrocos</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+
+        <tr>
+          <td>3°</td>
+          <td>Brasil</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+
+        <tr>
+          <td>4°</td>
+          <td>Haiti</td>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </section>
+
+    <br />
+
+    <section>
+      <h1>Núcleo Tecnológico</h1>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Diciplinas</th>
+            <th colspan="4">Aulas semanais por periodos</th>
+            <th colspan="2">Carga Horario</th>
+          </tr>
+
+          <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+        </thead>
+      </table>
+    </section>
+
+    <br />
+
+    <section>
+      <h2>Técnico em Informática - 1° ano</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Disciplinas</th>
+            <th>Carga Horária (h)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Autoria Web</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Introdução a programação</td>
+            <td>120</td>
+          </tr>
+
+          <tr>
+            <td>Educação em Tecnologias Digitais</td>
+            <td>60</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <br />
 
     <section>
       <h2>Envie uma mensagem</h2>
       <form action="#">
         <label for="nome">Nome completo:</label><br />
-        <input type="text" id="nome" name="nome" /><br />
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome..."
+        /><br />
 
-        <label for="senha">Senha:</label><br>
-        <input type="password" name="senha" id="senha">
-        
-        <br>
+        <label for="senha">Senha:</label><br />
+        <input
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="Digite sua senha..."
+        />
 
-        <br>
+        <br />
+
+        <br />
 
         <label for="copa">Brasil vai ser campeão?</label>
-        
-        <br>
-        <input type="radio" id="sim" name="Brasil" value="Sim">
-        <label for="sim">Sim</label>
-         <input type="radio" id="nao" name="Brasil" value="Não">
-        <label for="nao">Não</label>
-        <br>
 
-<!-- Caixas de Seleção -->
+        <br />
+        <input type="radio" id="sim" name="Brasil" value="Sim" />
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="Brasil" value="Não" />
+        <label for="nao">Não</label>
+        <br />
+
+        <!-- Caixas de Seleção -->
 
         <p>Selecione as suas favoritas ao título de 2026:</p>
 
-        <input type="checkbox" id="brasil" name="brasil" value="brasil"/>
+        <input type="checkbox" id="brasil" name="brasil" value="brasil" />
         <label for="brasil">Brasil</label>
-        <input type="checkbox" id="franca" name="França" value="França"/>
+        <input type="checkbox" id="franca" name="França" value="França" />
         <label for="franca">França</label>
 
-        <br>
+        <br />
 
         <label for="mensagem">Mensagem:</label><br />
         <textarea name="mensagem" id="mensagem" rows="5"></textarea><br />
@@ -54,11 +158,10 @@
         </select>
       </form>
     </section>
-    
-    <br>
 
-    <br>
-   
+    <br />
+
+    <br />
 
     <a href="index.html">Voltar para a página inicial</a>
   </body>
