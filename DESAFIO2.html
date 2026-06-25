@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Cadastro de Participantes de Oficina</h1>
+
+    <br />
+
+    <section>
+      <h2>Insira seu dados</h2>
+      <form action="#">
+        <label for="nome">Nome completo:</label><br />
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome..."
+        /><br />
+
+        <label for="senha">Senha:</label><br />
+        <input
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="Digite sua senha..."
+        />
+
+        <br /><br />
+
+ <label for="Oficina Principal">Selecione uma Oficina</label><br />
+        <select name="linguagens" id="linguagens">
+          <option value="Artes">Artes</option>
+          <option value="Ciências">Ciências</option>
+          <option value="Matemática">Matemática</option>
+          <option value="Robótica">Robótica</option>
+        </select>
+
+        <br><br><br>
+
+        <label for="copa">Turno: (Horário)</label>
+
+        <br />
+        <input type="radio" id="Matutino" name="Turno" value="Matutino" />
+        <label for="Matutino">Matutino</label>
+        <input type="radio" id="Vespertino" name="Turno" value="Vespertino" />
+        <label for="Vespertino">Vespertino</label>
+
+        <br /><br>
+
+        <!-- Caixas de Seleção -->
+
+        <p>Categorias:</p>
+
+        <input type="checkbox" id="Artes" name="Artes" value="Artes" />
+        <label for="brasil">Artes</label>
+
+        <input type="checkbox" id="Ciências" name="Ciências" value="Ciências" />
+        <label for="Ciências">Ciências</label>
+
+        <input
+          type="checkbox"
+          id="Matemática"
+          name="Matemática"
+          value="Matemática"
+        />
+        <label for="Matemática">Matemática</label>
+
+        <input type="checkbox" id="Robótica" name="Robótica" value="Robótica" />
+        <label for="Robótica">Robótica</label>
+
+        <br /><br />
+
+        <section>
+          <label for="Observacoes">Observações:</label><br />
+          <textarea name="mensagem" id="mensagem" rows="5"></textarea><br />
+        </section>
+
+        <section>
+          <br />
+
+          <h2>Participantes já inscritos</h2>
+          <table border="1">
+            <thead>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Turno</th>
+              <th>Série</th>
+              <th>Status</th>
+            </thead>
+
+            <tr>
+              <td>Luiza</td>
+              <td>Ciências</td>
+              <td>Matutino</td>
+              <td>1° ano</td>
+              <td>Confirmado</td>
+            </tr>
+
+            <tr>
+              <td>Guilherme</td>
+              <td>Matemática</td>
+              <td>Matutino</td>
+              <td>3° ano</td>
+              <td>Confirmado</td>
+            </tr>
+
+            <tr>
+              <td>Otávio</td>
+              <td>Matemática</td>
+              <td>Vespertino</td>
+              <td>1° ano</td>
+              <td>Em análise</td>
+            </tr>
+
+            <tr>
+              <td>Vitor Miguel</td>
+              <td>Artes</td>
+              <td>Vespertino</td>
+              <td>1° ano</td>
+              <td>Confirmado</td>
+            </tr>
+          </table>
+        </section>
+
+        <br />
+      </form>
+    </section>
+
+    <br><br><br>
+
+    <section>
+      <footer>
+        <h3>IFRN - Campus Macau</h3>
+        <p>Desenvolvido por Everton Júnior</p>
+      </footer>
+    </section>
+
+    <br />
+  </body>
+</html>
