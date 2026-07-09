@@ -1,0 +1,41 @@
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: darkblue;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --blue-slate: #495867;
+  --glaucous: #577399;
+  --sky: #bdd5ea;
+  --white: #ffffff;
+  --green: #3da35d;
+}
+
+/* Seleção de id */
+#table {
+  text-align: center;
+  background-color: var(--glaucous);
+  color: var(--sky);
+}
+
+/* Seleção de classe */
+.negrito {
+  font-weight: bolder;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "lobster", "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: var(--sky);
+  background-color: var(--blue-slate);
+}
