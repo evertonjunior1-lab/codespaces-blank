@@ -1,0 +1,229 @@
+/* =========================
+   PALETA DE CORES
+========================= */
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333333;
+    --cor-header-footer: #1f2937;
+    --cor-texto-claro: #ffffff;
+    --cor-destaque: /* =========================
+   PALETA DE CORES
+========================= */
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333333;
+    --cor-header-footer: #1f2937;
+    --cor-texto-claro: #ffffff;
+    --cor-destaque: #2563eb;
+    --cor-card: #e5e7eb;
+    --cor-inicio: #dbeafe;
+    --cor-programacao: #dcfce7;
+    --cor-contato: #fef3c7;
+}
+
+/* =========================
+   ESTILO GERAL
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* =========================
+   HEADER E FOOTER
+========================= */
+header,
+footer {
+    background-color: var(--cor-header-footer);
+    color: var(--cor-texto-claro);
+    padding: 20px;
+    text-align: center;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1,
+h2,
+.titulo-secao {
+    font-family: Georgia, serif;
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2,
+.titulo-secao {
+    font-size: 1.5rem;
+}
+
+/* =========================
+   CARDS DE PROGRAMAÇÃO
+========================= */
+.card-programa {
+    background-color: var(--cor-card);
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   IDS DAS SEÇÕES
+========================= */
+#inicio {
+    background-color: var(--cor-inicio);
+    padding: 20px;
+}
+
+#programacao {
+    background-color: var(--cor-programacao);
+    border-left: 5px solid green;
+    padding: 20px;
+}
+
+#contato {
+    background-color: var(--cor-contato);
+    border-left: 5px solid orange;
+    padding: 20px;
+}
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+    border-radius: 5px;
+}#ffffff;
+    --cor-card: #e5e7eb;
+    --cor-inicio: #dbeafe;
+    --cor-programacao: #dcfce7;
+    --cor-contato: #fef3c7;
+}
+
+/* =========================
+   ESTILO GERAL
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* =========================
+   HEADER E FOOTER
+========================= */
+header,
+footer {
+    background-color: var(--cor-header-footer);
+    color: var(--cor-texto-claro);
+    padding: 20px;
+    text-align: center;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1,
+h2,
+.titulo-secao {
+    font-family: Georgia, serif;
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2,
+.titulo-secao {
+    font-size: 1.5rem;
+}
+
+/* =========================
+   CARDS DE PROGRAMAÇÃO
+========================= */
+.card-programa {
+    background-color: var(--cor-card);
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   IDS DAS SEÇÕES
+========================= */
+#inicio {
+    background-color: var(--cor-inicio);
+    padding: 20px;
+}
+
+#programacao {
+    background-color: var(--cor-programacao);
+    border-left: 5px solid green;
+    padding: 20px;
+}
+
+#contato {
+    background-color: var(--cor-contato);
+    border-left: 5px solid orange;
+    padding: 20px;
+}
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+    border-radius: 5px;
+}

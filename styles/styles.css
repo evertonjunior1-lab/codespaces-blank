@@ -21,7 +21,7 @@ h2 {
 
 /* Seleção de classe */
 .negrito {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 h1,
@@ -38,4 +38,38 @@ body {
 h1 {
   color: var(--sky);
   background-color: var(--blue-slate);
+}
+
+img {
+  height: 20rem;
+  border-radius: 5px 10px 30px ;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+#nav-links ul {
+  list-style-type: none;
+}
+
+#nav-links li {
+  display: inline-block;
+}
+
+a {
+text-decoration: none;
+color: var(--sky);
+background-color: var(--blue-slate);
+border-radius: 5px;
+}
+
+a:hover {
+  color: var(--green);
+  box-shadow: 0 0 5px var(--green);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
