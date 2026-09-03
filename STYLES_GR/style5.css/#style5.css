@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Instagram Clone</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafafa;
+    color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MENU */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 245px;
+    height: 100vh;
+
+    background: white;
+    border-right: 1px solid #ddd;
+
+    padding: 30px 20px;
+}
+
+.logo {
+    font-family: cursive;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu button {
+    border: none;
+    background: transparent;
+
+    text-align: left;
+
+    padding: 13px 10px;
+
+    font-size: 16px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background: #f2f2f2;
+}
+
+/* CONTEÚDO */
+
+.container {
+    width: 600px;
+
+    margin-left: 330px;
+
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* STORIES */
+
+.stories {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    display: flex;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    margin-bottom: 25px;
+}
+
+.story {
+    min-width: 65px;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+.story img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 3px;
+
+    background:
+        linear-gradient(45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5);
+}
+
+/* POST */
+
+.post {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+}
+
+.post-header {
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 15px;
+}
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.profile img {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.more {
+    border: none;
+
+    background: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+/* FOTO */
+
+.post-image {
+    width: 100%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* AÇÕES */
+
+.actions {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 15px;
+}
+
+.actions-left {
+    display: flex;
+
+    gap: 15px;
+}
+
+.actions button {
+    border: none;
+
+    background: none;
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+.actions button:hover {
+    transform: scale(1.1);
+}
+
+/* INFORMAÇÕES */
+
+.post-info {
+    padding: 0 15px 18px;
+}
+
+.likes {
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.caption {
+    line-height: 1.5;
+
+    margin-bottom: 8px;
+}
+
+.comments {
+    color: #737373;
+
+    cursor: pointer;
+}
+
+/* COMENTÁRIOS */
+
+.comment-area {
+    display: none;
+
+    padding: 10px 15px;
+
+    border-top: 1px solid #eee;
+}
+
+.comment-area input {
+    width: 80%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 10px;
+}
+
+.comment-area button {
+    border: none;
+
+    background: none;
+
+    color: #0095f6;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* BARRA DIREITA */
+
+.rightbar {
+    position: fixed;
+
+    top: 50px;
+
+    right: 70px;
+
+    width: 280px;
+}
+
+.my-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.my-profile img {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.my-profile div {
+    flex: 1;
+}
+
+.my-profile span {
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+.change {
+    border: none;
+
+    background: none;
+
+    color: #0095f6;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.suggestion-title {
+    color: #777;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.suggestion {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-info small {
+    display: block;
+
+    color: #777;
+
+    margin-top: 3px;
+}
+
+.follow {
+    border: none;
+
+    background: none;
+
+    color: #0095f6;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+
+    .rightbar {
+        display: none;
+    }
+
+    .container {
+        margin: auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: fixed;
+
+        top: auto;
+        bottom: 0;
+
+        width: 100%;
+
+        height: 60px;
+
+        padding: 0;
+
+        z-index: 100;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        height: 100%;
+
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        align-items: center;
+    }
+
+    .menu button {
+        font-size: 22px;
+
+        padding: 8px;
+    }
+
+    .menu button span {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+
+        padding-top: 10px;
+
+        padding-bottom: 80px;
+    }
+
+    .stories {
+        border-left: none;
+        border-right: none;
+
+        border-radius: 0;
+    }
+
+    .post {
+        border-left: none;
+        border-right: none;
+
+        border-radius: 0;
+    }
+
+    .post-image {
+        height: auto;
+
+        aspect-ratio: 1;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU LATERAL -->
+
+<aside class="sidebar">
+
+    <h1 class="logo">Instagram</h1>
+
+    <nav class="menu">
+
+        <button onclick="home()">⌂ <span>Início</span></button>
+
+        <button onclick="search()">⌕ <span>Pesquisar</span></button>
+
+        <button>◉ <span>Explorar</span></button>
+
+        <button>▶ <span>Reels</span></button>
+
+        <button>✉ <span>Mensagens</span></button>
+
+        <button onclick="notification()">♡ <span>Notificações</span></button>
+
+        <button onclick="createPost()">＋ <span>Criar</span></button>
+
+        <button>◉ <span>Perfil</span></button>
+
+    </nav>
+
+</aside>
+
+
+<!-- CONTEÚDO -->
+
+<main class="container">
+
+
+    <!-- STORIES -->
+
+    <section class="stories">
+
+        <div class="story">
+            <img src="https://i.pravatar.cc/100?img=12">
+            <p>seu_perfil</p>
+        </div>
+
+        <div class="story">
+            <img src="https://i.pravatar.cc/100?img=32">
+            <p>gabriel</p>
+        </div>
+
+        <div class="story">
+            <img src="https://i.pravatar.cc/100?img=47">
+            <p>juliana</p>
+        </div>
+
+        <div class="story">
+            <img src="https://i.pravatar.cc/100?img=5">
+            <p>marcos</p>
+        </div>
+
+        <div class="story">
+            <img src="https://i.pravatar.cc/100?img=44">
+            <p>ana</p>
+        </div>
+
+        <div class="story">
+            <img src="https://i.pravatar.cc/100?img=20">
+            <p>lucas</p>
+        </div>
+
+    </section>
+
+
+    <!-- POST 1 -->
+
+    <article class="post">
+
+        <header class="post-header">
+
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100?img=11">
+
+                <strong>fotografia</strong>
+
+            </div>
+
+            <button class="more">•••</button>
+
+        </header>
+
+
+        <img
+            class="post-image"
+            src="https://picsum.photos/600/600?random=10"
+        >
+
+
+        <div class="actions">
+
+            <div class="actions-left">
+
+                <button onclick="like(this)">
+                    ♡
+                </button>
+
+                <button onclick="comments(this)">
+                    💬
+                </button>
+
+                <button onclick="share()">
+                    ➤
+                </button>
+
+            </div>
+
+            <button>🔖</button>
+
+        </div>
+
+
+        <div class="post-info">
+
+            <div class="likes">
+                1.245 curtidas
+            </div>
+
+            <div class="caption">
+
+                <strong>fotografia</strong>
+
+                Um dia incrível para registrar
+                momentos especiais 📸
+
+            </div>
+
+            <div
+                class="comments"
+                onclick="comments(this)"
+            >
+                Ver comentários
+            </div>
+
+        </div>
+
+
+        <div class="comment-area">
+
+            <input
+                type="text"
+                placeholder="Adicione um comentário..."
+            >
+
+            <button onclick="addComment(this)">
+                Publicar
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- POST 2 -->
+
+    <article class="post">
+
+        <header class="post-header">
+
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100?img=25">
+
+                <strong>viagens</strong>
+
+            </div>
+
+            <button class="more">
+                •••
+            </button>
+
+        </header>
+
+
+        <img
+            class="post-image"
+            src="https://picsum.photos/600/600?random=20"
+        >
+
+
+        <div class="actions">
+
+            <div class="actions-left">
+
+                <button onclick="like(this)">
+                    ♡
+                </button>
+
+                <button onclick="comments(this)">
+                    💬
+                </button>
+
+                <button onclick="share()">
+                    ➤
+                </button>
+
+            </div>
+
+            <button>🔖</button>
+
+        </div>
+
+
+        <div class="post-info">
+
+            <div class="likes">
+                892 curtidas
+            </div>
+
+            <div class="caption">
+
+                <strong>viagens</strong>
+
+                Explorando novos lugares 🌎✨
+
+            </div>
+
+            <div
+                class="comments"
+                onclick="comments(this)"
+            >
+                Ver comentários
+            </div>
+
+        </div>
+
+
+        <div class="comment-area">
+
+            <input
+                type="text"
+                placeholder="Adicione um comentário..."
+            >
+
+            <button onclick="addComment(this)">
+                Publicar
+            </button>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<!-- BARRA DIREITA -->
+
+<aside class="rightbar">
+
+    <div class="my-profile">
+
+        <img src="https://i.pravatar.cc/100?img=12">
+
+        <div>
+
+            <strong>seu_perfil</strong>
+
+            <span>Seu Nome</span>
+
+        </div>
+
+        <button class="change">
+            Mudar
+        </button>
+
+    </div>
+
+
+    <div class="suggestion-title">
+        Sugestões para você
+    </div>
+
+
+    <div class="suggestion">
+
+        <img src="https://i.pravatar.cc/100?img=8">
+
+        <div class="suggestion-info">
+
+            <strong>carolina</strong>
+
+            <small>Seguido por amigos</small>
+
+        </div>
+
+        <button
+            class="follow"
+            onclick="follow(this)"
+        >
+            Seguir
+        </button>
+
+    </div>
+
+
+    <div class="suggestion">
+
+        <img src="https://i.pravatar.cc/100?img=15">
+
+        <div class="suggestion-info">
+
+            <strong>pedro</strong>
+
+            <small>Seguido por ana</small>
+
+        </div>
+
+        <button
+            class="follow"
+            onclick="follow(this)"
+        >
+            Seguir
+        </button>
+
+    </div>
+
+
+    <div class="suggestion">
+
+        <img src="https://i.pravatar.cc/100?img=35">
+
+        <div class="suggestion-info">
+
+            <strong>beatriz</strong>
+
+            <small>Novidade no Instagram</small>
+
+        </div>
+
+        <button
+            class="follow"
+            onclick="follow(this)"
+        >
+            Seguir
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script>
+
+/* CURTIR */
+
+function like(button) {
+
+    if (button.innerText === "♡") {
+
+        button.innerText = "❤️";
+
+        button.style.color = "red";
+
+    } else {
+
+        button.innerText = "♡";
+
+        button.style.color = "black";
+
+    }
+
+}
+
+
+/* COMENTÁRIOS */
+
+function comments(element) {
+
+    const post = element.closest(".post");
+
+    const area = post.querySelector(".comment-area");
+
+    if (area.style.display === "block") {
+
+        area.style.display = "none";
+
+    } else {
+
+        area.style.display = "block";
+
+        area.querySelector("input").focus();
+
+    }
+
+}
+
+
+/* ADICIONAR COMENTÁRIO */
+
+function addComment(button) {
+
+    const area = button.closest(".comment-area");
+
+    const input = area.querySelector("input");
+
+    if (input.value.trim() === "") {
+
+        alert("Digite um comentário.");
+
+        return;
+
+    }
+
+    alert("Comentário publicado: " + input.value);
+
+    input.value = "";
+
+}
+
+
+/* SEGUIR */
+
+function follow(button) {
+
+    if (button.innerText === "Seguir") {
+
+        button.innerText = "Seguindo";
+
+        button.style.color = "#777";
+
+    } else {
+
+        button.innerText = "Seguir";
+
+        button.style.color = "#0095f6";
+
+    }
+
+}
+
+
+/* COMPARTILHAR */
+
+function share() {
+
+    if (navigator.clipboard) {
+
+        navigator.clipboard.writeText(
+            window.location.href
+        );
+
+        alert("Link copiado!");
+
+    } else {
+
+        alert("Post compartilhado!");
+
+    }
+
+}
+
+
+/* MENU */
+
+function home() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+function search() {
+
+    const termo = prompt(
+        "O que você deseja pesquisar?"
+    );
+
+    if (termo) {
+
+        alert(
+            "Pesquisando por: " + termo
+        );
+
+    }
+
+}
+
+
+function notification() {
+
+    alert(
+        "Você não possui novas notificações."
+    );
+
+}
+
+
+function createPost() {
+
+    const texto = prompt(
+        "Digite uma legenda para seu novo post:"
+    );
+
+    if (texto) {
+
+        alert(
+            "Post criado com sucesso! 📸\n\n" +
+            texto
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
